@@ -15,7 +15,7 @@ import Awards from "../components/sections/awards"
 
 const IndexPage = ( props ) => (
   <Layout>
-    <SEO title="Welcome to InfoSoft Global (P) Ltd." />
+    <SEO title="Stitch &amp; Style - Ladies Tailor at Panihati, Sodepur" />
 		<div className="top-sticky-bg">
 			<BackgroundImage
 				fluid={ props.data.indexImage.childImageSharp.fluid }

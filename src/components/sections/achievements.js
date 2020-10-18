@@ -18,10 +18,6 @@ const achievementsList = [
 	{
 		img: 'achievement-3',
 		info: 'We\'ve received multiple <a aria-current="Awards" class="underline text-indigo-600 hover:text-indigo-500" href="/#awards">awards</a> and coverage in <a href="https://www.forbesindia.com/article/30-under-30/pallav-nadhani-making-data-look-pretty/37209/1" target="_blank" rel="noreferrer noopener" class="underline text-indigo-600 hover:text-indigo-500">Forbes</a>, <a href="https://www.entrepreneur.com/article/295019" target="_blank" rel="noreferrer noopener" class="underline text-indigo-600 hover:text-indigo-500">Entrepreneur</a>, <a href="https://www.outlookbusiness.com/specials/entrepreneurs-under_30/fusioncharts-2333" target="_blank" rel="noreferrer noopener" class="underline text-indigo-600 hover:text-indigo-500">Business Outlook</a>, <a href="https://www.businesstoday.in/magazine/cover-story/best-advice-i-ever-got-fusioncharts-ceo-pallav-nadhani/story/187486.html" target="_blank" rel="noreferrer noopener" class="underline text-indigo-600 hover:text-indigo-500">Business Today</a>, <a href="http://www.marwar.com/the-accidental-entrepreneur/" target="_blank" rel="noreferrer noopener" class="underline text-indigo-600 hover:text-indigo-500">Marwar India</a>, ET etc.'
-	},
-	{
-		img: 'achievement-4',
-		info: 'We believe in sustainable growth and have been bootstrapped (customer funded) and profitable every year since our inception.'
 	}
 ];
 
@@ -44,7 +40,7 @@ class Achievements extends Component {
 	return (
 			<div className="bg-white achievements">
 				<div className="container mx-auto px-8 md:px-16 py-16 relative z-10 -mt-12">
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 -mt-16">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-16">
 						{achievementsList.map((value, index) => {
 							return <div className="text-gray-700 bg-white border border-gray-200 rounded shadow-lg px-6 py-5 transition duration-500 ease-in-out transform hover:-translate-y-2" key={index}>
 								{value.img === 'achievement-1' ? (
@@ -55,9 +51,6 @@ class Achievements extends Component {
 								): ''}
 								{value.img === 'achievement-3' ? (
 									<img className="mx-auto mb-4" src={AchievementThree} alt=""/>
-								): ''}
-								{value.img === 'achievement-4' ? (
-									<img className="mx-auto mb-4" src={AchievementFour} alt=""/>
 								): ''}
 								{/* <p>{value.info}</p> */}
 								<div ref={this.element} className="htmlContainer text-sm" dangerouslySetInnerHTML={{ __html: value.info }}/>
