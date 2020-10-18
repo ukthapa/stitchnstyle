@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "gatsby";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import CompanyLogo from "../images/igpl.svg";
+// import { AnchorLink } from "gatsby-plugin-anchor-links";
+import CompanyLogo from "../images/stitch-style-logo.png";
 
 class primarynav extends Component {
 	constructor(props) {
@@ -25,47 +25,70 @@ class primarynav extends Component {
 		}));
 	  }
 
+	  componentDidMount() {
+		if (typeof window !== "undefined") {
+		window.addEventListener("scroll", this.toggleBodyClass);
+		// this.toggleBodyClass();
+		}
+	  }
+
+	  componentWillUnmount() {
+		if (typeof window !== "undefined"){
+			window.removeEventListener("scroll", this.toggleBodyClass);
+		}
+	  }
+
+
+	toggleBodyClass = () => {
+		if (window.scrollY < 40) {
+		  document.body.classList.remove("stickyHeader");
+		} else {
+		  document.body.classList.add("stickyHeader");
+		}
+	};
+
   render() {
 	const navs = [
 			{
-				label: 'Business Units',
-				link: 'business-units'
+				label: 'Home',
+				link: '/'
 			},
 			{
-				label: 'Awards',
-				link: 'awards'
+				label: 'Services',
+				link: '/services'
 			},
 			{
-				label: 'Directors',
-				link: 'directors'
+				label: 'About Us',
+				link: '/about-us'
 			},
 			{
 				label: 'Contact us',
-				link: 'contact-us'
+				link: '/contact-us'
 			}
 		];
     return (
 	<div className="flex justify-between items-center">
-		<Link to="/" className="relative  z-50 transition duration-500 ease-in-out  bg-white py-1 px-2 rounded-full inline-block shadow-md transform scale-75 md:scale-100">
+		<Link to="/" className="relative  z-50 transition duration-500 ease-in-out  py-1 px-2 inline-block transform scale-75 md:scale-100">
 			<img className ="transition duration-500 ease-in-out transform scale-75 md:scale-100" src={CompanyLogo} alt="InfoSoft Global P. Ltd." width="35" height="43"/>
 		</Link>
 
 
 
-		<nav id="primaryNav" className="active absolute md:relative inset-0" className={ this.state.condition ? "active" : "" }>
-			<div className="hamburger-menu md:hidden" onClick={this.handleClick}>
+		<nav id="primaryNav" className="active absolute  inset-0" className={ this.state.condition ? "active" : "" }>
+			<a href="https://wa.me/919831307971" className="link" target="_blank">Whatsapp</a>
+			<a href="tel:9831307971" className="link">9831307971</a>
+			<div className="hamburger-menu" onClick={this.handleClick}>
 				<div className="hamburger" ></div>
 			</div>
-			<ul className="shadow-2xl md:shadow-none absolute md:relative right-0 md:right-auto block md:flex  md:flex-row justify-end md:space-x-10 text-sm tracking-wide p-8 md:p-0 bg-white bg-opacity-95 md:bg-transparent mt-10 md:mt-0  w-2/3 md:w-auto h-screen md:h-auto">
+			<ul className="shadow-2xl  absolute  right-0  block  justify-end  text-sm tracking-wide p-8 bg-white bg-opacity-95  mt-10   w-3/4  md:w-2/4  lg:w-1/4  h-screen ">
 				{navs.map((value, index) => {
 					return<li key={index} className="my-2 text-xl md:text-base"
 					onClick={this.linkClick}>
-						<AnchorLink
-							to={"/#" + value.link}
-							title={value.label}
+						<Link
+							to={value.link}
 							partiallyActive={true}
-							stripHash
-						/>
+							activeClassName="active"
+						>{value.label}</Link>
 						</li>
 				})}
 			</ul>

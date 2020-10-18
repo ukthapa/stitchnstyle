@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer className="overflow-hidden">
 					<div className="container mx-auto px-8 md:px-16 pt-16 pb-10 relative z-10 ">
-          	<p className="text-white">&copy; {new Date().getFullYear()}, {` `} InfoSoft Global Pvt. Ltd.</p>
+          	<p className="text-white">&copy; {new Date().getFullYear()}, {` `} Stitch &amp; Style  | Design &amp; Developed by <a href="https://www.ukthapa.com" target="_blank">ukthapa.com</a></p>
 					</div>
         </footer>
       </div>
