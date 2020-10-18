@@ -19,9 +19,11 @@ const IndexPage = ( props ) => (
 		<div className="top-sticky-bg">
 			<BackgroundImage
 				fluid={ props.data.indexImage.childImageSharp.fluid }
+				className="banner-bg"
 			>
 				<Banner />
-			    </BackgroundImage>
+				<div className="overlay-bg"></div>
+			</BackgroundImage>
 				<Achievements />
 				<Business />
 				<Awards />

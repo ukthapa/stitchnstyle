@@ -13,8 +13,8 @@ class Banner extends Component {
 						<div className="flex-grow mt-8">
 							<img className="banner-logo mb-4" src={bannerLogo} alt=""/>
 							<div className="max-w-2xl  md:mr-10">
-								<h1 ref={this.element} className="text-3xl lg:text-4xl my-8 text-gray-800 text-center uppercase" dangerouslySetInnerHTML={{ __html: bannerHeading }}/>
-								<div className="text-gray-700 text-4xl lg:text-6xl text-center uppercase" dangerouslySetInnerHTML={{ __html: bannerInfo }}/>
+								<h1 ref={this.element} className="text-xl md:text-2xl lg:text-3xl my-8 text-yellow-400 text-center uppercase tracking-widest banner-header ">{bannerHeading}</h1>
+								<div className="font-black text-white text-2xl md:text-4xl lg:text-6xl text-center uppercase banner-subheading">{bannerInfo}</div>
 							</div>
 						</div>
 					</div>
