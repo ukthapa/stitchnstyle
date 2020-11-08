@@ -133,6 +133,14 @@ footer::before {
 	-o-transition: transform .5s ease-in-out;
 }
 
+#primaryNav .link {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#primaryNav .link:first-child {
+	margin-left: 0;
+}
 
 
 .divider {
@@ -227,9 +235,6 @@ footer::before {
 	margin: 0 auto;
 }
 
-#primaryNav .link {
-	margin-right: 20px;
-}
 
 .top-sticky-bg > div::before {
 	background-attachment: fixed;
@@ -256,3 +261,21 @@ footer::before {
 	letter-spacing: 1px;
     text-shadow: -1px 9px 3px rgba(12,12,12,0.3);
 }
+
+
+.icon {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+}
+
+.icon-whatsapp {
+	background: url(../images/whatsapp.svg) no-repeat center center;
+	background-size: cover;
+}
+
+.icon-phone {
+	background: url(../images/phone.svg) no-repeat center center;
+	background-size: cover;
+}
+

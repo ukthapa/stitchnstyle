@@ -40,7 +40,7 @@ class primarynav extends Component {
 
 
 	toggleBodyClass = () => {
-		if (window.scrollY < 40) {
+		if (window.scrollY < 200) {
 		  document.body.classList.remove("stickyHeader");
 		} else {
 		  document.body.classList.add("stickyHeader");
@@ -74,16 +74,16 @@ class primarynav extends Component {
 
 
 
-		<nav id="primaryNav" className="active absolute  inset-0" className={ this.state.condition ? "active" : "" }>
-			<a href="https://wa.me/919831307971" className="link" target="_blank">Whatsapp</a>
-			<a href="tel:9831307971" className="link">9831307971</a>
-			<div className="hamburger-menu" onClick={this.handleClick}>
+		<nav id="primaryNav" className= { this.state.condition ? "active" : "" }>
+			<a href="https://wa.me/919831307971" className="link" target="_blank" rel="noreferrer"><i class="icon icon-whatsapp"></i><span className="sr-only">Whatsapp</span></a>
+			<a href="tel:9831307971" className="link" rel="noreferrer"><i class="icon icon-phone"></i><span className="sr-only">9831307971</span></a>
+			<div className="hamburger-menu" onClick={this.handleClick} onKeyDown={this.handleClick}>
 				<div className="hamburger" ></div>
 			</div>
 			<ul className="shadow-2xl  absolute  right-0  block  justify-end  text-sm tracking-wide p-8 bg-white bg-opacity-95  mt-10   w-3/4  md:w-2/4  lg:w-1/4  h-screen ">
 				{navs.map((value, index) => {
 					return<li key={index} className="my-2 text-xl md:text-base"
-					onClick={this.linkClick}>
+					onClick={this.linkClick} onKeyDown={this.linkClick}>
 						<Link
 							to={value.link}
 							partiallyActive={true}

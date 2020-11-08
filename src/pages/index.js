@@ -16,20 +16,20 @@ import Awards from "../components/sections/awards"
 const IndexPage = ( props ) => (
   <Layout>
     <SEO title="Stitch &amp; Style - Ladies Tailor at Panihati, Sodepur" />
-		<div className="top-sticky-bg">
-			<BackgroundImage
-				fluid={ props.data.indexImage.childImageSharp.fluid }
-				className="banner-bg"
-			>
-				<Banner />
-				<div className="overlay-bg"></div>
-			</BackgroundImage>
-				<Achievements />
-				<Business />
-				<Awards />
-				<Founders />
-				<Contact />
-		</div>
+	<div className="top-sticky-bg">
+		<BackgroundImage
+			fluid={ props.data.indexImage.childImageSharp.fluid }
+			className="banner-bg"
+		>
+			<Banner />
+			<div className="overlay-bg"></div>
+		</BackgroundImage>
+			<Achievements />
+			<Business />
+			<Awards />
+			<Founders />
+			<Contact />
+	</div>
   </Layout>
 )
 
