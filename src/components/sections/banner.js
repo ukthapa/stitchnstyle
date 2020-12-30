@@ -7,8 +7,8 @@ class Banner extends Component {
 		const bannerHeading = "Ladies Tailoring & Boutique"
 		const bannerInfo = "Tailor The Trend"
 		return (
-			<div className="banner py-8 md:py-16">
-				<div className="container mx-auto px-3 md:px-16 pt-8 pb-16 md:py-16 ">
+			<div className="banner py-8 md:py-3">
+				<div className="container mx-auto px-3 md:px-16 pt-8 pb-16 py-2 md:py-16 ">
 					<div className="flex flex-col justify-center items-center">
 						<div className="flex-grow mt-8">
 							<img className="banner-logo w-40 md:w-64 mb-4" src={bannerLogo} alt=""/>

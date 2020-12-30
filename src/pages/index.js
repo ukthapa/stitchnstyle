@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from 'react-helmet'
 import BackgroundImage from "gatsby-background-image"
 import {  graphql } from 'gatsby'
 
@@ -16,6 +17,11 @@ import Awards from "../components/sections/awards"
 const IndexPage = ( props ) => (
   <Layout>
     <SEO title="Stitch &amp; Style - Ladies Tailor at Panihati, Sodepur" />
+	<Helmet
+		bodyAttributes={{
+			class: 'home'
+		}}
+	/>
 	<div className="top-sticky-bg">
 		<BackgroundImage
 			fluid={ props.data.indexImage.childImageSharp.fluid }
@@ -24,11 +30,11 @@ const IndexPage = ( props ) => (
 			<Banner />
 			<div className="overlay-bg"></div>
 		</BackgroundImage>
-			<Achievements />
-			<Business />
-			<Awards />
-			<Founders />
-			<Contact />
+		<Achievements />
+		<Business />
+		<Awards />
+		<Founders />
+		<Contact />
 	</div>
   </Layout>
 )

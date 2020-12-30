@@ -8,7 +8,7 @@ import Contact from "../components/sections/contact"
 
 const IndexPage = ( props ) => (
   <Layout>
-    <SEO title="Welcome to InfoSoft Global (P) Ltd." />
+    <SEO title="Contact Stitch &amp; Style - Ladies Tailor &amp; Boutique at H.B.Town, Sodepur" />
 		<div className="top-sticky-bg">
 			<Contact />
 		</div>
