@@ -25,18 +25,18 @@ class primarynav extends Component {
 		}));
 	  }
 
-	  componentDidMount() {
-		if (typeof window !== "undefined") {
-		window.addEventListener("scroll", this.toggleBodyClass);
-		// this.toggleBodyClass();
-		}
-	  }
+	componentDidMount() {
+	if (typeof window !== "undefined") {
+	window.addEventListener("scroll", this.toggleBodyClass);
+	// this.toggleBodyClass();
+	}
+	}
 
-	  componentWillUnmount() {
-		if (typeof window !== "undefined"){
-			window.removeEventListener("scroll", this.toggleBodyClass);
-		}
-	  }
+	componentWillUnmount() {
+	if (typeof window !== "undefined"){
+		window.removeEventListener("scroll", this.toggleBodyClass);
+	}
+	}
 
 
 	toggleBodyClass = () => {
@@ -58,6 +58,10 @@ class primarynav extends Component {
 				link: '/services'
 			},
 			{
+				label: 'Showcase',
+				link: '/showcase'
+			},
+			{
 				label: 'About Us',
 				link: '/about-us'
 			},
@@ -69,7 +73,7 @@ class primarynav extends Component {
     return (
 	<div className="flex justify-between items-center">
 		<Link to="/" className="relative  z-50 transition duration-500 ease-in-out  py-1 px-2 inline-block transform scale-75 md:scale-100">
-			<img className ="transition duration-500 ease-in-out transform scale-75 md:scale-100" src={CompanyLogo} alt="InfoSoft Global P. Ltd." width="35" height="43"/>
+			<img id="stitch-and-style-logo" className ="transition duration-500 ease-in-out transform scale-75 md:scale-150" src={CompanyLogo} alt="InfoSoft Global P. Ltd." width="35" height="43"/>
 		</Link>
 
 
@@ -80,7 +84,7 @@ class primarynav extends Component {
 			<div className="hamburger-menu" onClick={this.handleClick} onKeyDown={this.handleClick}>
 				<div className="hamburger" ></div>
 			</div>
-			<ul className="shadow-2xl  absolute  right-0  block  justify-end  text-sm tracking-wide p-8 bg-white bg-opacity-95  mt-10   w-3/4  md:w-2/4  lg:w-1/4  h-screen ">
+			<ul className="shadow-2xl  absolute  right-0  block  justify-end  text-sm tracking-wide p-8 bg-white bg-opacity-95  mt-2   w-3/4  md:w-2/4  lg:w-1/4  h-screen ">
 				{navs.map((value, index) => {
 					return<li key={index} className="my-2 text-xl md:text-base"
 					onClick={this.linkClick} onKeyDown={this.linkClick}>
