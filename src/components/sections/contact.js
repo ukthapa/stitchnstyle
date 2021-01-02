@@ -21,7 +21,7 @@ class Contact extends Component {
 				<div className="bg-white" id="contact-us">
 					<div className="container mx-auto px-8 md:px-16 py-16">
 						<h2 className="text-center text-4xl font-medium text-gray-800">Contact Us</h2>
-						<Divider />
+						<Divider  type="twoDots"/>
 						<h3 className="text-center text-xl font-medium text-gray-800 py-3">Looking to visit us?</h3>
 						<div className="grid grid-cols-1  gap-16 py-8 max-w-screen-md mx-auto">
 							{contactInfo.map((value, index) => {
@@ -59,7 +59,7 @@ class Contact extends Component {
 										</div>
 							})}
 						</div>
-						<Divider />
+						<Divider  type="twoDots"/>
 						<h3 className="text-center text-xl font-medium text-gray-800 py-3">For Quick Contact</h3>
 						<p className="text-center"><a className=" text-2xl text-indigo-600 hover:text-indigo-500" href="tel:9831307971">9831307971</a></p>
 					</div>

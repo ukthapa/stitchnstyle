@@ -79,7 +79,7 @@ footer::before {
 .hamburger, .hamburger::after, .hamburger::before{
 	position: absolute;
     width: 30px;
-    height: 4px;
+    height: 3px;
     transition-timing-function: ease;
     transition-duration: .15s;
     transition-property: transform;
@@ -93,11 +93,11 @@ footer::before {
 }
 
 .hamburger::before {
-	top: -10px
+	top: -8px
 }
 
 .hamburger:after {
-	bottom: -10px
+	bottom: -8px
 }
 
 
@@ -296,3 +296,4 @@ footer::before {
 	background-size: cover;
 }
 
+/* Utility */
